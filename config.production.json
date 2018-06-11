@@ -1,0 +1,29 @@
+{
+  "url": "https://revmanager.eu",
+  "server": {
+    "port": 2368,
+    "host": "127.0.0.1"
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "localhost",
+      "user": "ghost",
+      "password": "921fc8715f64011e77057df34789245245e75f8a0b6e35e2",
+      "database": "ghost_production"
+    }
+  },
+  "mail": {
+    "transport": "Direct"
+  },
+  "logging": {
+    "transports": [
+      "file",
+      "stdout"
+    ]
+  },
+  "process": "systemd",
+  "paths": {
+    "contentPath": "/var/www/ghost/content"
+  }
+}
