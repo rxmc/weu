@@ -25,5 +25,9 @@
   "process": "systemd",
   "paths": {
     "contentPath": "/var/www/ghost/content"
+  },
+  "bootstrap-socket": {
+    "port": 8000,
+    "host": "localhost"
   }
 }

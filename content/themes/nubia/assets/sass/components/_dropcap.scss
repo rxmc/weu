@@ -2,8 +2,11 @@
   Components > Dropcap
 \*------------------------------------*/
 
+// All posts edited or saved with the Koenig editor enabled are wrapped in an element with .kg-post
+// https://forum.ghost.org/t/koenig-editor-beta-release/1284
+
 .c-content,
-.kg-card-markdown {
+.kg-post {
   > p:first-child {
     &::first-letter {
       float: left;

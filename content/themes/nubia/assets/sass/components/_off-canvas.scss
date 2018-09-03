@@ -84,7 +84,7 @@ body {
   .c-off-canvas-content {
     position: fixed;
     top: 0;
-    right: 0;
+    right: - quarter($base-spacing-unit);
     z-index: 1;
     width: $off-canvas-width;
     height: 100vh;

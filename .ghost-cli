@@ -1,7 +1,7 @@
 {
-  "cli-version": "1.7.3",
-  "active-version": "1.24.4",
+  "cli-version": "1.9.2",
+  "active-version": "2.1.0",
   "name": "178-62-224-84",
-  "previous-version": "1.23.1",
+  "previous-version": "1.25.5",
   "running": "production"
 }

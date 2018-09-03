@@ -22,9 +22,9 @@
 
   &__title {
     padding-left: half($base-spacing-unit);
-    margin-bottom: $base-spacing-unit + half($base-spacing-unit) + quarter($base-spacing-unit);
+    margin-bottom: $base-spacing-unit + half($base-spacing-unit);
     line-height: 1;
-    letter-spacing: 2px;
+    letter-spacing: $global-letter-spacing;
     border-left: 2px solid $color-brand;
     font-size: $font-size-small;
     text-transform: uppercase;

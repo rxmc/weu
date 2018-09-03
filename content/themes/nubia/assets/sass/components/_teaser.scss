@@ -9,10 +9,6 @@
   padding-left: $base-spacing-unit;
   padding-top: $base-spacing-unit;
 
-  &:first-of-type {
-    padding-top: 0;
-  }
-
   @include mq(tablet, desktop) {
     display: block;
     padding-left: 0;
@@ -29,11 +25,16 @@
     }
   }
 
+  &:first-of-type {
+    padding-top: 0;
+  }
+
   &:before {
     counter-increment: widget;
     content: counter(widget) '. ';
     position: relative;
     left: - $base-spacing-unit;
+    line-height: 1;
     font-size: $font-size-base;
     font-style: italic;
     font-family: $font-serif;
@@ -67,11 +68,11 @@
     background-color: $bg-gray;
     transition: all $global-transition ease-in-out;
 
-    &.js-fadein {
+    .js-enabled &.js-fadein {
       opacity: 0;
     }
 
-    &.is-inview {
+    .js-enabled &.is-inview {
       opacity: 1;
     }
 

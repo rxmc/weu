@@ -26,11 +26,11 @@
     background-size: cover;
     transition: all $global-transition ease-in-out;
 
-    &.js-fadein {
+    .js-enabled &.js-fadein {
       opacity: 0;
     }
 
-    &.is-inview {
+    .js-enabled &.is-inview {
       opacity: 1;
     }
 
@@ -50,6 +50,13 @@
       content: '';
       width: 100%;
       padding-bottom: 75%;
+    }
+
+    // Home Page Second Post Card
+    @include mq($from: desktop) {
+      .home-template .js-post-card-wrap:nth-of-type(2) .c-post-card &:after {
+        padding-bottom: 118%;
+      }
     }
   }
 
@@ -169,22 +176,11 @@
 
     .c-post-card__share {
       opacity: 1;
-
     }
 
     .c-post-card__title-link {
       color: $color-text;
       border-bottom: 1px solid $color-brand;
-    }
-  }
-}
-
-// Home Page Second Post Card
-
-.c-post-card--half {
-  @include mq($from: desktop) {
-    .c-post-card__image:after {
-      padding-bottom: 118%;
     }
   }
 }

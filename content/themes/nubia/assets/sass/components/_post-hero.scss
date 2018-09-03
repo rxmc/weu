@@ -19,11 +19,11 @@
     background-color: $bg-gray;
     transition: all $global-transition ease-in-out;
 
-    &.js-fadein {
+    .js-enabled &.js-fadein {
       opacity: 0;
     }
 
-    &.is-inview {
+    .js-enabled &.is-inview {
       opacity: 1;
     }
 

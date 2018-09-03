@@ -5,6 +5,10 @@
 .c-share {
   display: flex;
 
+  @include mq($until: desktop) {
+    margin-top: $base-spacing-unit;
+  }
+
   &__item {
     flex: 1;
     text-align: center;

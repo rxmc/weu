@@ -2,11 +2,7 @@ $(document).ready(function() {
 
   'use strict';
 
-  // =====================
-  // Homepage Layout
-  // =====================
-
-  $('.home-template .js-post-card-wrap:nth-of-type(2) .c-post-card').addClass('c-post-card--half');
+  $('body').addClass('js-enabled');
 
   // =====================
   // Decode HTML entities returned by Ghost translations
@@ -19,11 +15,34 @@ $(document).ready(function() {
   }
 
   // =====================
+  // Off Canvas menu
+  // =====================
+
+  $('.js-off-canvas-toggle').click(function(e) {
+    e.preventDefault();
+    $('.js-off-canvas-content, .js-off-canvas-container').toggleClass('is-active');
+  });
+
+  // =====================
+  // Post Card Images Fade
+  // =====================
+
+  $('.js-fadein').viewportChecker({
+    classToAdd: 'is-inview', // Class to add to the elements when they are visible
+    offset: 100,
+    removeClassAfterAnimation: true
+  });
+
+  // =====================
   // Responsive videos
   // =====================
 
   $('.c-content').fitVids({
-    'customSelector': ['iframe[src*="ted.com"]', 'iframe[src*="player.twitch.tv"]']
+    'customSelector': [ 'iframe[src*="ted.com"]'          ,
+                        'iframe[src*="player.twitch.tv"]' ,
+                        'iframe[src*="dailymotion.com"]'  ,
+                        'iframe[src*="facebook.com"]'
+                      ]
   });
 
   // =====================
@@ -51,25 +70,6 @@ $(document).ready(function() {
       $(this).removeAttr('aria-label');
       $(this).removeClass('tooltipped tooltipped-s');
     });
-  });
-
-  // =====================
-  // Off Canvas menu
-  // =====================
-
-  $('.js-off-canvas-toggle').click(function(e) {
-    e.preventDefault();
-    $('.js-off-canvas-content, .js-off-canvas-container').toggleClass('is-active');
-  });
-
-  // =====================
-  // Post Card Images Fade
-  // =====================
-
-  $('.js-fadein').viewportChecker({
-    classToAdd: 'is-inview', // Class to add to the elements when they are visible
-    offset: 100,
-    removeClassAfterAnimation: true
   });
 
   // =====================

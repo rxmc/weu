@@ -25,7 +25,7 @@ li code { padding: half(quarter($line-height-medium)) quarter($line-height-mediu
 
 pre[class*='language-'] {
   padding: double($base-spacing-unit);
-  margin: $base-spacing-unit 0;
+  margin-bottom: $base-spacing-unit + half($base-spacing-unit);
 }
 
 code[class*='language-'],
